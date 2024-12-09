@@ -1,0 +1,19 @@
+import pyautogui
+import time
+
+# Delay to allow you to switch to the target window
+print("Switch to the target window. Starting in 5 seconds...")
+time.sleep(5)
+
+try:
+    while True:
+        pyautogui.press("up")  # Simulate pressing the "Up Arrow" key
+        pyautogui.press("enter")  # Simulate pressing the "Enter" key
+        print("Pressed 'Up Arrow' and 'Enter'. Waiting for 20 seconds...")
+        time.sleep(20)  # Wait for 20 seconds
+except KeyboardInterrupt:
+    print("\nScript stopped by the user.")
+
+
+
+pip install pyautogui
