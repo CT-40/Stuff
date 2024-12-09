@@ -1,0 +1,8 @@
+@echo off
+echo Starting the script. Press Ctrl+C to stop.
+:loop
+    rem Simulate pressing "Up Arrow" and "Enter"
+    powershell -command "$wshell = New-Object -ComObject wscript.shell; $wshell.SendKeys('{UP}'); Start-Sleep -Milliseconds 200; $wshell.SendKeys('{ENTER}')"
+    rem Wait for 20 seconds
+    timeout /t 20 >nul
+goto loop
